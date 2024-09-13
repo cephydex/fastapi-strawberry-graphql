@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+masonite-orm==2.18.6
+psycopg2-binary==2.9.5
+strawberry-graphql[fastapi]==0.158.0
+pytest
+# pytest==7.2.1
+httpx
