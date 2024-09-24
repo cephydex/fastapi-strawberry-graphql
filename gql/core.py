@@ -1,4 +1,5 @@
 import strawberry
+from typing import List
 
 from .controller import CreateMutation, Queries
 from .schema import UserType, PostType, CommentsType
@@ -9,7 +10,7 @@ class Mutation:
     add_post: PostType = strawberry.mutation(resolver=CreateMutation.add_post)
     add_comment: CommentsType = strawberry.mutation(resolver=CreateMutation.add_comment)
 
-from typing import List
+
 @strawberry.type
 class Query:
     users: List[UserType] = strawberry.field(resolver=Queries.get_all_users)

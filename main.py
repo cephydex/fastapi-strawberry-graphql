@@ -40,17 +40,6 @@ schema = strawberry.Schema(
 graphgql_app = GraphQLRouter(schema)
 app.include_router(graphgql_app, prefix="/graphql")
 
-@app.on_event("startup")
-async def startup_event():
-    
-    pass
-   
-
-@app.on_event("shutdown")
-async def shutdown_event():
-
-    pass
-
 
 @app.get("/")
 def index():

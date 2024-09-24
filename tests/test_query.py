@@ -40,6 +40,7 @@ def test_get_user_list(user):
         }
     """
     response = client.post("/graphql", json={"query": query})
+    print("Response", response)
     assert response is not None
     assert response.status_code == 200
 
@@ -59,6 +60,7 @@ def test_get_single_user(user):
         }
     """ % user.id
     response = client.post("/graphql", json={"query": query})
+    print("Response", response)
     assert response is not None
     assert response.status_code == 200
 
